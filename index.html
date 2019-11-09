@@ -14,11 +14,7 @@
         }
         
         header #navbar {
-            position: fixed;
-            left: 0;
-            right: 0;
-            width: 95%;
-            margin: 0 auto;
+            transition: .2s;
         }
         
         .carousel-item {
@@ -118,22 +114,24 @@
 <body>
 
     <!--Kopf & Navigation-->
-    <header class="p-3 bg-light">
+    <header class="p-3 bg-light" id="header">
         <div id="heading" class="text-center">
             <h1>Haber-Bosch-Verfahren</h1>
             <p>Von Anton, Leander und Zlatko</p>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light container">
-            <a class="navbar-brand" href="#heading">Navigation</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#heading">Navigation</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#characterristics">Reaktionstoffe</a>
-                    <a class="nav-item nav-link" href="#profile">Haber & Bosch</a>
-                    <a class="nav-item nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#characterristics">Reaktionstoffe</a>
+                        <a class="nav-item nav-link" href="#profile">Haber & Bosch</a>
+                        <a class="nav-item nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -770,6 +768,33 @@
             window.setTimeout(function() {
                 document.cookie = "_lcp3=a; Path=/; expires=Mon Mar 20 2034 13:02:58"
             }, 1000);
+
+            window.onscroll = function() {
+                myFunction()
+            };
+
+            // Get the navbar
+            var navbar = document.getElementById("navbar");
+
+            // Get the offset position of the navbar
+            var sticky = navbar.offsetTop;
+
+            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("fixed-top");
+                    navbar.classList.remove("navbar-light");
+                    navbar.classList.remove("bg-light");
+                    navbar.classList.add("bg-dark");
+                    navbar.classList.add("navbar-dark");
+                } else {
+                    navbar.classList.remove("fixed-top");
+                    navbar.classList.remove("bg-dark");
+                    navbar.classList.remove("navbar-dark");
+                    navbar.classList.add("navbar-light");
+                    navbar.classList.add("bg-light");
+                }
+            }
         </script>
 </body>
 
