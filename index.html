@@ -127,8 +127,8 @@
             </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#characterristics">Reaktionstoffe</a>
+                        <a class="nav-item nav-link" href="#">Home</a>
+                        <a class="nav-item nav-link" href="#characterristics" id="link-characterristics">Reaktionstoffe</a>
                         <a class="nav-item nav-link" href="#profile">Haber & Bosch</a>
                         <a class="nav-item nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </div>
@@ -794,6 +794,17 @@
                     navbar.classList.add("navbar-light");
                     navbar.classList.add("bg-light");
                 }
+                /*
+                if ($("section").offset().top <= window.pageYOffset) {
+                    let id = $(this).attr("id");
+                    console.log($(this));
+                   
+                     $("#navbar li").removeClass("active");
+                     
+                     $("#link-" + id).addClass("active");
+                    
+                }
+                */
             }
         </script>
 </body>
