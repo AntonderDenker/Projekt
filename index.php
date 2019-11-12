@@ -71,16 +71,23 @@
         
         #process img {
             padding: 25px;
+            
         }
         
         footer {
             width: 100%;
-            height: 250px;
+            
             background-color: rgba(0, 0, 0, 0.8);
             margin-top: 100px;
-            padding: 50px 0;
+            padding: 25px;
             overflow: hidden;
             position: relative;
+        }
+
+        footer img {
+            width: 40%;
+            margin: 50px auto;
+            border-radius: 10px;
         }
         /* 
         .contact-icons i {
@@ -94,10 +101,7 @@
         */
         
         .impressum {
-            position: absolute;
-            bottom: 20;
-            left: 0;
-            right: 0;
+          
         }
         
         #profile img {
@@ -126,17 +130,16 @@
     <header class="p-3 bg-light" id="header">
         <div id="heading" class="text-center">
             <h1>Haber-Bosch-Verfahren</h1>
-            <p>Von Anton, Leander und Zlatko</p>
+            <p>von Anton, Leander und Zlatko</p>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
             <div class="container">
-                <a class="navbar-brand" href="#heading">Navigation</a>
+                <a class="navbar-brand" href="#heading">Start</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#">Home</a>
                         <a class="nav-item nav-link" href="#nitrogen-cycle">Stickstoffkreislauf</a>
                         <a class="nav-item nav-link" href="#characteristics" id="link-characteristics">Reaktionstoffe</a>
                         <a class="nav-item nav-link" href="#profile">Haber & Bosch</a>
@@ -174,7 +177,7 @@
         </section>
 
         <!--Reaktionsstoffe-->
-       <?php include "./items/process.html"; ?>
+       <?php include "./items/carousel.html"; ?>
 
         <!--Profile-->
         <section id="profile">
@@ -215,8 +218,8 @@
             <h2>Simulation</h2>
             <hr>
             <p class="lead text-center">Teste und interagiere mit der Reaktion des Haber-Bosch-Verfahrens</p>
-            <iframe src="https://scratch.mit.edu/projects/343946085/embed" allowtransparency="true" width="100%" height="750" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            <p class="lead text-center" style="margin-top: 20;">Die Simulation befindet sich leider noch in Arbeit. <br>Bitte kommen sie später wieder.</p>
+            <iframe src="https://scratch.mit.edu/projects/343941459/embed" allowtransparency="true" width="100%" height="750" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <p class="lead text-center" style="margin-top: 20;">Die Simulation befindet sich leider noch in Arbeit.</p>
         </section>
 
         <!--Folgen-->
@@ -235,22 +238,19 @@
             <br>
             <h5>...auf die Gesundheit des Menschen</h5>
             <p>
-                @Anton Hier bitte deinen Text einfügen!
+            Ammoniak, welcher in die Atmosphäre gerät, wandelt sich in Feinstaub um. Dieser trägt erheblich zur Luftverschmutzung bei und ist Ursache für Herzkreislauf- und Atemwegserkrankungen. Zudem reduziert er Lungenfunktion und verursacht Krebs. Jedes Jahr kommt es daher zu mehr als 47.000 vorzeitigen Todesfällen durch die Feinstaubbelastung. Ebenso gefährlich ist das Nitrat aus welchem sich Nitrit bilden kann. Dieses verbindet sich mit Hämoglobin und beeinträchtigt die Sauerstoffzufuhr, was besonders für Säuglinge lebensgefährlich werden kann. Außerdem wird Nitrit von bestimmten Bakterien im Darm zu krebserregenden Nitrosaminen umgewandelt werden. 
             </p>
         </section>
 
     </div>
 
-        <footer class="d-flex justify-content-center">
+        <footer class="">
             <div class="text-white text-center">
-                <div class="">
+               
                     <h1 class="display-4" style="font-size: 3rem;">Diese Website ist im Zuge eines Schulprojektes entstanden
                     </h1>
-                    <p class="lead">Bei Fragen oder Anregungen können sie uns über folgende Möglichkeiten kontaktieren:</p>
-                </div>
-                <!--div class="contact-icons mt-5">
-                    <i class="far fa-envelope" id="icon-mail"></i>
-                </div-->
+
+                    <img src="./img/Group-Img.jpg">
 
                 <div class="impressum">
                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#impressum">
